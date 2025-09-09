@@ -6,6 +6,7 @@ const app = Vue.createApp({
             brand: 'Vue Mastery',
             image: './assets/images/socks_blue.jpg',
             inStock: false,
+            onSale: true,
             details: ['50% cotton', '30% wool', '20% polyester'],
             variants: [
               { id: 2234, color: 'green', image: './assets/images/socks_green.jpg' },
@@ -19,6 +20,11 @@ const app = Vue.createApp({
         },
         updateImage(variantImage) {
             this.image = variantImage
+        }
+    }, 
+    computed: {
+        saleMessage(){
+            return this.brand + this.product + " is on sale!"
         }
     }
 })
