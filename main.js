@@ -20,7 +20,7 @@ const app = Vue.createApp({
             this.selectedVariant = index
         }
     },
-    computed: {
+    computed: { 
         title() {
             return this.brand + ' ' + this.product
         },
